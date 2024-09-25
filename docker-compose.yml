@@ -20,6 +20,8 @@ services:
       - postgres
     env_file:
       - .env
+    environment:
+      DB_HOST: postgres
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 1m

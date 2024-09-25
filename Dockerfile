@@ -17,7 +17,7 @@ COPY src src
 RUN ./gradlew build --no-daemon
 
 # Stage 2: Create the final image
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:17-jre-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
